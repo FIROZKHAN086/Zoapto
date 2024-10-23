@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/download (1).png" type="image/x-icon">
+  <title>Roal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 100%;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .food-title {
+      font-size: 1.5em;
+      margin: 15px 0;
+    }
+
+    .food-price {
+      font-size: 1.2em;
+      color: #e67e22;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .star {
+      color: #f39c12;
+      font-size: 1.5em;
+    }
+
+    .rating-value {
+      font-size: 1em;
+      color: #555;
+      margin-left: 5px;
+    }
+
+    .add-to-cart {
+      background-color: #2ecc71;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .add-to-cart:hover {
+      background-color: #27ae60;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .card {
+        padding: 15px;
+      }
+
+      .food-title {
+        font-size: 1.3em;
+      }
+
+      .food-price {
+        font-size: 1.1em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card-container {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 10px;
+      }
+
+      .food-title {
+        font-size: 1.2em;
+      }
+
+      .food-price {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/44d/29c310c0ec87e0048df4e069dabe144d.jpg" alt="Roal" class="card-img">
+      <h2 class="food-title">Delicious Roal</h2>
+      <p class="food-price">&#8377;350</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(4.0)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Duplicate remaining cards with different content -->
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/26b/e5d31e973ebcfd880a309ecb4cfad26b.jpg" alt="Roal" class="card-img">
+      <h2 class="food-title">Cheesy Roal</h2>
+      <p class="food-price">&#8377;300</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/ba6/a795f6ab9dbdde6a35e1f82754942ba6.jpg" alt="Roal" class="card-img">
+      <h2 class="food-title">Twon Caffe</h2>
+      <p class="food-price">&#8377;500</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/2eb/3bf5cd6eed0a7e140c95a747757662eb.jpg" alt="Roal" class="card-img">
+      <h2 class="food-title">Amizing foodies</h2>
+      <p class="food-price">&#8377;450</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    
+
+    <!-- Add six more cards similarly -->
+  </div>
+  
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/5bd/11dd7751ef2ee75463163b17311925bd.jpg" alt="Roal" class="card-img">
+      <h2 class="food-title">Drak-Food</h2>
+      <p class="food-price">&#8377;400</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(4.0)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Duplicate remaining cards with different content -->
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/31d/3046523283925f33f30cdd61805fb31d.jpg?output-format=webp" alt="Roal" class="card-img">
+      <h2 class="food-title">Street Roal</h2>
+      <p class="food-price">&#8377;200</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/bb5/911ffe4dc354c9ce4c6fa8676124bbb5.png?output-format=webp" alt="Roal" class="card-img">
+      <h2 class="food-title">Hotel Taz</h2>
+      <p class="food-price">&#8377;250</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/pictures/7/19486017/d15024c13458e3aa5552c37292bc304d_o2_featured_v2.jpg?output-format=webp" alt="Roal" class="card-img">
+      <h2 class="food-title" id="food">Roaless</h2>
+      <p class="food-price">&#8377;300</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(4.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Add six more cards similarly -->
+    
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/639/0240c607bcf49709c65e6de9f5787639.jpg?output-format=webp" alt="Roal" class="card-img">
+      <h2 class="food-title">Home Town</h2>
+      <p class="food-price">&#8377;400</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(4.0)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Duplicate remaining cards with different content -->
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/b1c/fa582ec112fd00def9a70784eacecb1c.jpg?output-format=webp" alt="Roal" class="card-img">
+      <h2 class="food-title">City FOOD</h2>
+      <p class="food-price">&#8377;200</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/547/2c5310647cffde582864665a6afa4547.jpg?output-format=webp" alt="Roal" class="card-img">
+      <h2 class="food-title">THE CHEF</h2>
+      <p class="food-price">&#8377;250</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/8ae/b03314d4ee726ad5e3558077d54428ae.jpg?output-format=webp" alt="Roal" class="card-img">
+      <h2 class="food-title" id="food">KINGS'S Caffe</h2>
+      <p class="food-price">&#8377;300</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(4.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+    <!-- Add six more cards similarly -->
+  
+
+  <script>
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const food = document.querySelectorAll('.food-title')
+    
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        alert("Item added to cart!");
+      });
+    });
+  </script>
+</body>
+
+</html>

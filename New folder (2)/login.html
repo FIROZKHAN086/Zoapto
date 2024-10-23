@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #4CAF50, #8BC34A);
+    animation: backgroundAnimation 5s infinite alternate;
+    z-index: -1; /* Send background behind other elements */
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(45deg, #4CAF50, #8BC34A);
+    }
+    100% {
+        background: linear-gradient(45deg, #8BC34A, #4CAF50);
+    }
+}
+
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    opacity: 0; /* Start hidden */
+    transform: translateY(-30px); /* Start off screen */
+    animation: fadeIn 0.5s forwards; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+p{ 
+    color: #000;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #4CAF50; /* Change border color on focus */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+    </style>
+    <title>Login please</title>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <button onclick="wellcome()" id="Click" type="submit">Login</button>
+        </form>
+        <p class="error-message" id="error-message"></p>
+        <!-- <p class="error-message1" id="error-message1"></p> -->
+    </div>
+
+ <script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message');
+    const errorMessage1 = document.getElementById('error-message1');
+
+    // Simple validation (replace with real authentication)
+    if (username = username.value && password === password.value) {
+        alert("Login successful!"); // You can redirect here
+    } else {
+        errorMessage.textContent = "Invalid username or password.";
+        // errorMessage1.innerHTML = "<h1> Make some nosie</h1>"
+    }
+    
+});
+
+ </script>
+</body>
+</html>

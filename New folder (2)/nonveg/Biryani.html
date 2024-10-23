@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/download (1).png" type="image/x-icon">
+  <title>Biryani</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 100%;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .food-title {
+      font-size: 1.5em;
+      margin: 15px 0;
+    }
+
+    .food-price {
+      font-size: 1.2em;
+      color: #e67e22;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .star {
+      color: #f39c12;
+      font-size: 1.5em;
+    }
+
+    .rating-value {
+      font-size: 1em;
+      color: #555;
+      margin-left: 5px;
+    }
+
+    .add-to-cart {
+      background-color: #2ecc71;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .add-to-cart:hover {
+      background-color: #27ae60;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .card {
+        padding: 15px;
+      }
+
+      .food-title {
+        font-size: 1.3em;
+      }
+
+      .food-price {
+        font-size: 1.1em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card-container {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 10px;
+      }
+
+      .food-title {
+        font-size: 1.2em;
+      }
+
+      .food-price {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/6ef/86aca7ac928dc8f8449ab93cc8a5c6ef.jpg" alt="Biryani" class="card-img">
+      <h2 class="food-title">Delicious Biryani</h2>
+      <p class="food-price">&#8377;350</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(4.0)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Duplicate remaining cards with different content -->
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/748/8f5ad80084f78372bb6b83eee7f0d748.jpg" alt="Biryani" class="card-img">
+      <h2 class="food-title">TOWN CAFFE</h2>
+      <p class="food-price">&#8377;300</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/411/f420846b5c388fedcc539197e111c411.jpeg" alt="Biryani" class="card-img">
+      <h2 class="food-title">HANDI BIRYANI</h2>
+      <p class="food-price">&#8377;500</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/pictures/9/19985179/3ddb974134513328d07c3e99d94d9b71_o2_featured_v2.jpg?output-format=webp" alt="Biryani" class="card-img">
+      <h2 class="food-title">CHEFER</h2>
+      <p class="food-price">&#8377;450</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    
+
+    <!-- Add six more cards similarly -->
+  </div>
+  
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/ad9/b74da8da4c0d030bf7ff9415ffb20ad9.jpg?output-format=webp" alt="Biryani" class="card-img">
+      <h2 class="food-title">BISMILA FOOD</h2>
+      <p class="food-price">&#8377;400</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(4.0)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Duplicate remaining cards with different content -->
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/pictures/6/19461706/07efa78d50dc92711afd6e2ffd9e0051_featured_v2.jpg?output-format=webp" alt="Biryani" class="card-img">
+      <h2 class="food-title">Biryani By Skyza</h2>
+      <p class="food-price">&#8377;200</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/0ae/3699ad452c1fd2c119f0428011df20ae.jpg?output-format=webp" alt="Biryani" class="card-img">
+      <h2 class="food-title">Dum Safer Biryani</h2>
+      <p class="food-price">&#8377;250</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/2a2/7e085233cc57ba17f5fd26a675aad2a2.jpeg?output-format=webp" alt="Biryani" class="card-img">
+      <h2 class="food-title" id="food">Muhammdi Palace</h2>
+      <p class="food-price">&#8377;300</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(4.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Add six more cards similarly -->
+    
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/3b1/77a54e48fec036e3c033a98fab50a3b1.jpg?output-format=webp" alt="Biryani" class="card-img">
+      <h2 class="food-title">Firoz Hotel</h2>
+      <p class="food-price">&#8377;400</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(4.0)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Duplicate remaining cards with different content -->
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/891/34fed8ee095c7e9590a5fd8c9a805891.jpg" alt="Biryani" class="card-img">
+      <h2 class="food-title">Sirka</h2>
+      <p class="food-price">&#8377;200</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/pictures/8/19690998/6d9dad14da075d37021c25041773e07b_o2_featured_v2.jpg?output-format=webp" alt="Biryani" class="card-img">
+      <h2 class="food-title">Behrouz Biryani</h2>
+      <p class="food-price">&#8377;250</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(3.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://b.zmtcdn.com/data/dish_photos/49b/3c3f7e091c01ce19e2c25a8ac183149b.jpg?output-format=webp" alt="Biryani" class="card-img">
+      <h2 class="food-title" id="food">Biryani Blues</h2>
+      <p class="food-price">&#8377;300</p>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9734;</span>
+        <span class="rating-value">(4.5)</span>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+    <!-- Add six more cards similarly -->
+  
+
+  <script>
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const food = document.querySelectorAll('.food-title')
+    
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        alert("Item added to cart!");
+      });
+    });
+  </script>
+</body>
+
+</html>
